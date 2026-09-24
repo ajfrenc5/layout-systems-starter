@@ -49,8 +49,23 @@
     padding-block: clamp(var(--space-6), 5vw, var(--space-8));
   }
 
+  /* 
+    Content-Driven Media Query:
+    At viewports wider than 48rem (768px), there is enough
+     horizontal space to place the hero heading and the 
+     weekend trip-card side-by-side without compressing either 
+     column into weird word breaks.
+  */
   .hero-layout {
-    /* Add a responsive layout pattern. */
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  @media (min-width: 48rem) {
+    .hero-layout {
+      grid-template-columns:2fr 1fr;
+    }
   }
 
   .guide-grid {
@@ -82,6 +97,7 @@
   .hero {
     background: var(--color-muted);
   }
+  
 
   .guide-card,
   .trip-card,
