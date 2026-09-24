@@ -40,7 +40,9 @@
 
 @layer layout {
   .wrapper {
-    /* Add a flexible logical inline-size and margin-inline auto. */
+    max-inline-size: 72rem;
+    margin-inline: auto;
+    padding-inline: var(--space-4);
   }
 
   .section {
