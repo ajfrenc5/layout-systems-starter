@@ -54,7 +54,9 @@
   }
 
   .guide-grid {
-    /* Build an intrinsic grid using repeat(), auto-fit/auto-fill, and minmax(). */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: var(--space-6);
   }
 
   .feature-shell {
